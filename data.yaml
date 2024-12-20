@@ -1,0 +1,11 @@
+# Paths to datasets (relative or absolute)
+train: train/images
+val: val/images
+test: test/images  # Optional, required if doing predictions on test set
+
+
+# Number of classes
+nc: 6
+
+# Names of the classes
+names: ['king', 'queen', 'bishop', 'knight', 'rook', 'pawn']
