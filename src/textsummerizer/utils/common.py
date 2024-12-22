@@ -9,7 +9,7 @@ from typing import Any
 
 @ensure_annotations
 
-def read_yaml(path_of_yaml:Path) -> ConfigBox:
+def read_yaml(path_of_yaml:Path):
   """ Read Yaml file and return 
   Args:
     path_of_yaml (str): path like input 
@@ -39,7 +39,7 @@ def create_directories(path_to_directories: list, verbose=True):
     ignore_log (bool, optional): ignore if multiple dirs is to be created. Default to False.
   """
   for path in path_to_directories:
-    os.makedirs(path, exist_ok=True)
+    os.makedirs(path, exist=True)
     if verbose:
       logger.info(f"created directory at: {path}")
 
