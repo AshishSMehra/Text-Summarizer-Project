@@ -21,7 +21,6 @@ class DataTransformationConfig:
     tokenizer_name: Path
 
 
-
 @dataclass(frozen=True)
 class ModelTrainerConfig:
     root_dir: Path

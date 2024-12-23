@@ -51,7 +51,6 @@ class DataIngestion:
             if not self.validate_file():
                 logger.error("Extraction aborted due to invalid ZIP file.")
                 return
-            
             with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
                 zip_ref.extractall(unzip_path)
                 logger.info(f"Extracted {self.config.local_data_file} to {unzip_path}")
