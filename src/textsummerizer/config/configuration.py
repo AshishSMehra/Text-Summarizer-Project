@@ -4,7 +4,6 @@ from textsummerizer.entity import DataValidationConfig
 from pathlib import Path 
 from textsummerizer.entity import DataIngestionConfig
 
-
 class ConfigurationManager:
     def __init__(
         self,
@@ -14,8 +13,6 @@ class ConfigurationManager:
         self.config = read_yaml(config_filepath)
         self.params = read_yaml(params_filepath)
         create_directories([self.config.artifacts_root])
-
-
 
     def get_data_ingestion_config(self) -> DataIngestionConfig:
         config = self.config.data_ingestion
@@ -27,8 +24,6 @@ class ConfigurationManager:
             unzip_dir=config.unzip_dir 
         )
         return data_ingestion_config
-
-
 
     def get_data_validation_config(self) -> DataValidationConfig:
         config = self.config.data_validation
